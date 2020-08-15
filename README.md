@@ -5,3 +5,4 @@
 - [003: Tuple Type](./003.ts)
 - [004: Interface + Extends + Array + Generics + Union = Tuple](./004.ts)
 - [005: Union Type](./005.ts)
+- [006: String Literal Type and Type Aliases](./006.ts)
