@@ -8,3 +8,4 @@
 - [006: String Literal Type and Type Aliases](./006.ts)
 - [007: Polymorphic This](./007.ts)
 - [008: Type Guards](./008.ts)
+- [009: Symbols](./009.ts)
