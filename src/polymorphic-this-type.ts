@@ -1,4 +1,4 @@
-// Polymorphic this types
+// Polymorphic this type
 
 class Vehicle {
   drive() {
