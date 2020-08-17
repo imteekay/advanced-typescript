@@ -9,3 +9,4 @@
 - [Polymorphic This](./src/polymorphic-this-type.ts)
 - [Type Guards](./src/type-guards.ts)
 - [Symbols](./src/symbol.ts)
+- [As Const](./src/as-const.ts)
