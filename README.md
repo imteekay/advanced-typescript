@@ -11,3 +11,5 @@
 - [Symbols](./src/symbol.ts)
 - [As Const](./src/as-const.ts)
 - [Readonly](./src/readonly.ts)
+- [Optional Chaining](./src/optional-chaining.ts)
+- [Nullish Coalescing](./src/nullish-coalescing.ts)
