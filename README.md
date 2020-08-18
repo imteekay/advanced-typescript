@@ -10,3 +10,4 @@
 - [Type Guards](./src/type-guards.ts)
 - [Symbols](./src/symbol.ts)
 - [As Const](./src/as-const.ts)
+- [Readonly](./src/readonly.ts)
