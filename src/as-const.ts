@@ -31,7 +31,8 @@ const personAsConst = {
   age: 23
 } as const;
 
-personAsConst.name = 'Other than TK'; // Compile Error! "Cannot assign to 'name' because it is a read-only property."
+// @ts-expect-error "Cannot assign to 'name' because it is a read-only property."
+personAsConst.name = 'Other than TK';
 personAsConst.name; // 'TK'
 
 // using as const for a complex object
@@ -59,8 +60,15 @@ const complexPerson = {
   ]
 } as const;
 
-complexPerson.name = 'Other than TK'; // Compile Error! "Cannot assign to 'name' because it is a read-only property."
+// @ts-expect-error "Cannot assign to 'name' because it is a read-only property."
+complexPerson.name = 'Other than TK';
 complexPerson.name; // 'TK'
-complexPerson.address.number = 2; // Compile Error! "Cannot assign to 'number' because it is a read-only property."
-complexPerson.address = 'An address'; // Compile Error! "Cannot assign to 'address' because it is a read-only property."
-complexPerson.books.push({ title: 'Another book', author: 'Another Author' }); // Compile Error! "Property 'push' does not exist on type 'readonly ["Effective TypeScript", "Atomic Habits", "Leonardo Da Vinci"]'."
+
+// @ts-expect-error "Cannot assign to 'number' because it is a read-only property."
+complexPerson.address.number = 2;
+
+// @ts-expect-error "Cannot assign to 'address' because it is a read-only property."
+complexPerson.address = 'An address';
+
+// @ts-expect-error "Property 'push' does not exist on type 'readonly ["Effective TypeScript", "Atomic Habits", "Leonardo Da Vinci"]'."
+complexPerson.books.push({ title: 'Another book', author: 'Another Author' });
