@@ -11,7 +11,7 @@
  * @param lastWords A callback to call before the error
  */
 export function assertUnreachable(
-  _type: never,
+  value: never,
   message?: string,
   lastWords?: () => void
 ): never {
