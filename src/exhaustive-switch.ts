@@ -6,7 +6,7 @@
 /**
  * This function enables the exhaustive check.
  * It works by returning `never`, and accepting the first param as `never`
- * @param _type The type that we're checking
+ * @param value The type that we're checking
  * @param message A message to display if it errors
  * @param lastWords A callback to call before the error
  */
