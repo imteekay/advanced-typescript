@@ -13,3 +13,4 @@
 - [Readonly](./src/readonly.ts)
 - [Optional Chaining](./src/optional-chaining.ts)
 - [Nullish Coalescing](./src/nullish-coalescing.ts)
+- [Exhaustive Switch](./src/exhaustive-switch.ts)
