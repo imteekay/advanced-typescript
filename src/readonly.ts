@@ -36,7 +36,8 @@ const readonlyPerson: ReadonlyPerson = {
   age: 23
 };
 
-readonlyPerson.name = 'Other than TK'; // Cannot assign to 'name' because it is a read-only property
+// @ts-expect-error Cannot assign to 'name' because it is a read-only property
+readonlyPerson.name = 'Other than TK';
 readonlyPerson.name; // 'TK'
 
 // using Readonly
@@ -50,7 +51,8 @@ const ReadonlyPerson: Readonly<Person> = {
   age: 23
 };
 
-ReadonlyPerson.name = 'Other than TK'; // Cannot assign to 'name' because it is a read-only property
+// @ts-expect-error Cannot assign to 'name' because it is a read-only property
+ReadonlyPerson.name = 'Other than TK';
 ReadonlyPerson.name; // 'TK'
 
 // using Readonly for a complex object
@@ -98,9 +100,18 @@ const complexPerson: ComplexPerson = {
   ]
 };
 
-complexPerson.name = 'Other than TK'; // Compile Error! "Cannot assign to 'name' because it is a read-only property."
+// @ts-expect-error "Cannot assign to 'name' because it is a read-only property."
+complexPerson.name = 'Other than TK';
 complexPerson.name; // 'TK'
-complexPerson.address.number = 2; // Compile Error! "Cannot assign to 'number' because it is a read-only property."
-complexPerson.address = 'An address'; // Compile Error! "Cannot assign to 'address' because it is a read-only property."
-complexPerson.books.push({ title: 'Another book', author: 'Another Author' }); // Compile Error! "Property 'push' does not exist on type 'readonly ["Effective TypeScript", "Atomic Habits", "Leonardo Da Vinci"]'."
-complexPerson.books[0].author = 'TK'; // Compile Error! "Cannot assign to 'author' because it is a read-only property"
+
+// @ts-expect-error "Cannot assign to 'number' because it is a read-only property."
+complexPerson.address.number = 2;
+
+// @ts-expect-error "Cannot assign to 'address' because it is a read-only property."
+complexPerson.address = 'An address';
+
+// @ts-expect-error "Property 'push' does not exist on type 'readonly ["Effective TypeScript", "Atomic Habits", "Leonardo Da Vinci"]'."
+complexPerson.books.push({ title: 'Another book', author: 'Another Author' });
+
+// @ts-expect-error "Cannot assign to 'author' because it is a read-only property"
+complexPerson.books[0].author = 'TK';

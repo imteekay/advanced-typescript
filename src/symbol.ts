@@ -4,6 +4,6 @@
 const symbol = Symbol('my symbol');
 const anotherSymbol = Symbol('another symbol');
 
-symbol === anotherSymbol;
-// This condition will always return 'false' since the types
+// @ts-expect-error This condition will always return 'false' since the types
 // 'typeof symbol' and 'typeof anotherSymbol' have no overlap
+symbol === anotherSymbol;
