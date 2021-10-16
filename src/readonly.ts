@@ -1,7 +1,7 @@
 // using var
 var varPerson = {
   name: 'TK',
-  age: 23
+  age: 23,
 };
 
 varPerson.name = 'Other than TK';
@@ -10,7 +10,7 @@ varPerson.name; // 'Other than TK'
 // using let
 let letPerson = {
   name: 'TK',
-  age: 23
+  age: 23,
 };
 
 letPerson.name = 'Other than TK';
@@ -19,7 +19,7 @@ letPerson.name; // 'Other than TK'
 // using const
 const person = {
   name: 'TK',
-  age: 23
+  age: 23,
 };
 
 person.name = 'Other than TK';
@@ -33,7 +33,7 @@ type ReadonlyPerson = {
 
 const readonlyPerson: ReadonlyPerson = {
   name: 'TK',
-  age: 23
+  age: 23,
 };
 
 // @ts-expect-error Cannot assign to 'name' because it is a read-only property
@@ -44,11 +44,11 @@ readonlyPerson.name; // 'TK'
 type Person = {
   name: string;
   age: number;
-}
+};
 
 const ReadonlyPerson: Readonly<Person> = {
   name: 'TK',
-  age: 23
+  age: 23,
 };
 
 // @ts-expect-error Cannot assign to 'name' because it is a read-only property
@@ -57,23 +57,23 @@ ReadonlyPerson.name; // 'TK'
 
 // using Readonly for a complex object
 type Address = Readonly<{
-  address: string,
-  number: number,
-  complement: string
+  address: string;
+  number: number;
+  complement: string;
 }>;
 
 type Book = Readonly<{
-  title: string,
-  author: string,
+  title: string;
+  author: string;
 }>;
 
 type Books = Readonly<Book[]>;
 
 type ComplexPerson = Readonly<{
-  name: string,
-  age: number,
-  address: Address,
-  books: Books
+  name: string;
+  age: number;
+  address: Address;
+  books: Books;
 }>;
 
 const complexPerson: ComplexPerson = {
@@ -82,22 +82,22 @@ const complexPerson: ComplexPerson = {
   address: {
     address: 'Shinjuku, Tokyo',
     number: 10,
-    complement: 'Ap 52'
+    complement: 'Ap 52',
   },
   books: [
     {
       title: 'Effective TypeScript',
-      author: 'Dan Vanderkam'
+      author: 'Dan Vanderkam',
     },
     {
       title: 'Atomic Habits',
-      author: 'James Clear'
+      author: 'James Clear',
     },
     {
       title: 'Leonardo Da Vinci',
-      author: 'Walter Isaacson'
-    }
-  ]
+      author: 'Walter Isaacson',
+    },
+  ],
 };
 
 // @ts-expect-error "Cannot assign to 'name' because it is a read-only property."

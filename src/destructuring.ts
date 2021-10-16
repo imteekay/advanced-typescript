@@ -13,7 +13,7 @@ const [gold, silver, bronze] = medals;
 const person = {
   name: 'TK',
   address: '123 Some Street',
-  phone: '99994828'
+  phone: '99994828',
 };
 
 const personName = person.name;

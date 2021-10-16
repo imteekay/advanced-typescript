@@ -8,5 +8,5 @@ aTuple[0] = 22;
 // @ts-expect-error "Type '"Name"' is not assignable to type 'number'."
 aTuple[1] = 'Name';
 
-aTuple[0] = 'Name'
-aTuple[1] = 22
+aTuple[0] = 'Name';
+aTuple[1] = 22;

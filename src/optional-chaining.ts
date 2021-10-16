@@ -5,9 +5,7 @@ type Payload = {
 };
 
 function isTimeoutError(payload: Payload) {
-  return payload &&
-    payload.response &&
-    payload.response.status === 504;
+  return payload && payload.response && payload.response.status === 504;
 }
 
 function isTimeoutErrorOptionalChain(payload: Payload) {

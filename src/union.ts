@@ -8,12 +8,12 @@ type Book = {
 const books: Book[] = [
   {
     title: 'Harry Potter 1',
-    author: 'JK Rowling'
+    author: 'JK Rowling',
   },
   {
     title: 'Harry Potter 2',
-    author: 'JK Rowling'
-  }
+    author: 'JK Rowling',
+  },
 ];
 
 type Paper = {
@@ -24,12 +24,12 @@ type Paper = {
 const papers: Paper[] = [
   {
     title: 'Why Functional Programming Matters',
-    researcher: 'John Hughes'
+    researcher: 'John Hughes',
   },
   {
     title: 'Out of the Tar Pit',
-    researcher: 'Ben Moseley & Peter Marks'
-  }
+    researcher: 'Ben Moseley & Peter Marks',
+  },
 ];
 
 const readingMaterial: Book | Paper = books[0];

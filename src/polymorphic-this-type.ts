@@ -6,13 +6,9 @@ class Vehicle {
   }
 }
 
-class Car extends Vehicle {
+class Car extends Vehicle {}
 
-}
-
-class Bus extends Vehicle {
-
-}
+class Bus extends Vehicle {}
 
 function printThisValue(instance: Vehicle) {
   const thisValue = instance.drive();

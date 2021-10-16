@@ -26,15 +26,15 @@ export function assertUnreachable(
  * You have to write this type, it should have all possible types for the possible
  * switch values
  */
-type Union = "A" | "B" | "C";
+type Union = 'A' | 'B' | 'C';
 
 let value: Union;
 
 switch (value) {
-  case "A":
+  case 'A':
     // handle 'A'
     break;
-  case "B":
+  case 'B':
     // handle 'B'
     break;
   // since C block is commented out, the code will
@@ -46,5 +46,7 @@ switch (value) {
 
   default:
     // @ts-expect-error Argument of type '"C"' is not assignable to parameter of type 'never'.ts(2345)
-    assertUnreachable(value, 'Switch has a missing clause!', () => console.log({ typeError: 'on switch' }));
+    assertUnreachable(value, 'Switch has a missing clause!', () =>
+      console.log({ typeError: 'on switch' })
+    );
 }
