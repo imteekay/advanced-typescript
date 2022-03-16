@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Advanced types patterns in TypeScript",
   "scripts": {
+    "dev": "ts-node",
     "format": "prettier --write ."
   },
   "repository": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/leandrotk/advanced-typescript#readme",
   "devDependencies": {
     "prettier": "2.4.1",
+    "ts-node": "10.7.0",
     "typescript": "4.4.4"
   }
 }
