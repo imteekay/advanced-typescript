@@ -2,9 +2,7 @@
   "name": "advanced-typescript",
   "version": "1.0.0",
   "description": "Advanced types patterns in TypeScript",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write ."
   },
   "repository": {
