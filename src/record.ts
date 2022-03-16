@@ -28,3 +28,33 @@ const alphabetToIndex: AlphabetToIndex = {
   y: 23,
   z: 24,
 };
+
+// records and dynamic values
+type CharToDigit = Record<string, number>;
+
+function buildMap(numbers: number[]) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const charToDigit: CharToDigit = {};
+
+  for (const number of numbers) {
+    // @ts-expect-error "Type 'string' is not assignable to type 'number'"
+    charToDigit['a'] = 's';
+
+    // if find the char in the alphabet, use it as the key, if not use an empty string.
+    charToDigit[alphabet[number] || ''] = number;
+  }
+
+  return charToDigit;
+}
+
+buildMap([1, 2, 3, 4, 5]);
+/*
+{
+  "a": "s",
+  "b": 1,
+  "c": 2,
+  "d": 3,
+  "e": 4,
+  "f": 5
+} 
+*/
