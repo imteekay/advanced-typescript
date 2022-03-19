@@ -15,3 +15,4 @@
 - [Nullish Coalescing](./src/nullish-coalescing.ts)
 - [Exhaustive Switch](./src/exhaustive-switch.ts)
 - [Pick](./src/pick.ts)
+- [Record](./src/record.ts)
