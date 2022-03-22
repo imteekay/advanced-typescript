@@ -2,9 +2,8 @@
   "name": "advanced-typescript",
   "version": "1.0.0",
   "description": "Advanced types patterns in TypeScript",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node",
     "format": "prettier --write ."
   },
   "repository": {
@@ -22,7 +21,8 @@
   },
   "homepage": "https://github.com/leandrotk/advanced-typescript#readme",
   "devDependencies": {
-    "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "prettier": "2.4.1",
+    "ts-node": "10.7.0",
+    "typescript": "4.4.4"
   }
 }
